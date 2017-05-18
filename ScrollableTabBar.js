@@ -82,6 +82,9 @@ const ScrollableTabBar = React.createClass({
   },
 
   updateTabPanel(position, pageOffset) {
+    if (!this._scrollView || !this._scrollView.scrollTo) {
+      return;
+    }
     const containerWidth = this._containerMeasurements.width;
     const tabWidth = this._tabsMeasurements[position].width;
     const nextTabMeasurements = this._tabsMeasurements[position + 1];
