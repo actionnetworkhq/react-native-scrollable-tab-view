@@ -1,6 +1,7 @@
 const React = require('react');
 const { ViewPropTypes } = ReactNative = require('react-native');
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 const {
   View,
   Animated,
@@ -15,7 +16,7 @@ const Button = require('./Button');
 
 const WINDOW_WIDTH = Dimensions.get('window').width;
 
-const ScrollableTabBar = React.createClass({
+const ScrollableTabBar =createReactClass({
   propTypes: {
     goToPage: PropTypes.func,
     activeTab: PropTypes.number,

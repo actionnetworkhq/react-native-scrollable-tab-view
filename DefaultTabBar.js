@@ -1,6 +1,7 @@
 const React = require('react');
 const { ViewPropTypes } = ReactNative = require('react-native');
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 const {
   StyleSheet,
   Text,
@@ -9,7 +10,7 @@ const {
 } = ReactNative;
 const Button = require('./Button');
 
-const DefaultTabBar = React.createClass({
+const DefaultTabBar = createReactClass({
   propTypes: {
     goToPage: PropTypes.func,
     activeTab: PropTypes.number,
